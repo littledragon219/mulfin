@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Zap, Shield, Star, TrendingUp, Award, CheckCircle, X } from 'lucide-react';
+import { Target, Zap, Shield, Star, TrendingUp, Award, CheckCircle, X, Heart, Hand, Globe } from 'lucide-react';
 import { Card } from '../ui/Card';
 import { ScatterChart } from '../ui/Chart';
 import { competitors, competitiveAdvantages } from '../../data/competitorData';
@@ -404,13 +404,15 @@ export const Competition: React.FC = () => {
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {advantage.category === '技术领先' && <Zap className="w-8 h-8 text-orange-600" />}
-                  {advantage.category === '用户体验' && <Star className="w-8 h-8 text-orange-600" />}
-                  {advantage.category === '市场定位' && <Target className="w-8 h-8 text-orange-600" />}
-                  {advantage.category === '数据安全' && <Shield className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'Zap' && <Zap className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'Heart' && <Heart className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'TrendingUp' && <TrendingUp className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'Hand' && <Hand className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'Globe' && <Globe className="w-8 h-8 text-orange-600" />}
+                  {advantage.icon === 'Award' && <Award className="w-8 h-8 text-orange-600" />}
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  {advantage.category}
+                  {advantage.title}
                 </h4>
                 <p className="text-gray-600 text-sm">
                   {advantage.description}

@@ -379,7 +379,7 @@ export const Team: React.FC = () => {
                                 {member.name}
                               </h5>
                               <p className="text-xs text-gray-600">
-                                {member.role}
+                                {member.position}
                               </p>
                             </div>
                           </div>

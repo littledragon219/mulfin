@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,7 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * 通用按钮组件
  * 支持多种样式变体、尺寸和加载状态
  */
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps & MotionProps> = ({
   variant = 'primary',
   size = 'md',
   children,

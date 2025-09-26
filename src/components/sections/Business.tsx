@@ -136,7 +136,7 @@ export const Business: React.FC = () => {
               {...staggerChildren(index, 0.1)}
             >
               <StatCard
-                title={key === 'targetPrice' ? '目标售价' :
+                label={key === 'targetPrice' ? '目标售价' :
                        key === 'grossMargin' ? '毛利率' :
                        key === 'customerAcquisitionCost' ? '获客成本' :
                        key === 'customerLifetimeValue' ? '客户生命周期价值' :
@@ -147,14 +147,6 @@ export const Business: React.FC = () => {
                        (key === 'targetPrice' || key === 'customerAcquisitionCost' || key === 'customerLifetimeValue' || key === 'averageOrderValue' ? `¥${value}` :
                         key === 'grossMargin' || key === 'monthlyChurnRate' ? `${value}%` :
                         key === 'paybackPeriod' ? `${value}个月` : value.toString()) : value}
-                subtitle={key === 'targetPrice' ? '产品定价策略' :
-                         key === 'grossMargin' ? '盈利能力指标' :
-                         key === 'customerAcquisitionCost' ? '营销效率' :
-                         key === 'customerLifetimeValue' ? '用户价值' :
-                         key === 'monthlyChurnRate' ? '用户留存' :
-                         key === 'averageOrderValue' ? '销售效率' :
-                         key === 'paybackPeriod' ? '资金回收' : ''}
-                color="green"
               />
             </motion.div>
           ))}
